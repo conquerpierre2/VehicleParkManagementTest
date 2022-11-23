@@ -1,0 +1,13 @@
+Pour les outils de qualité du code, j'ai préféré utiliser eslint car pour des projets dans les technologies javascript
+je trouve que c'est le plus adéquat et facile à paramétrer que Sonarqube je pense.
+En terme de processus ci/cd, je pense que un projet comme celui-ci doit être lié à un repo Github qui lui même doit être lié à outil CI comme Jenkins
+qui à chaque merge request exécutée fait exécuter les test des builds Jenkins ( inclus tests cucumber etc)
+
+J'aurai préféré faire le code en typescript, mais les ressources avec cucumber sont assez limitées et d'après ce que j'ai compris il faut exécuter la commande tsc à chaque fois
+sur les fichiers steps pour les recompiler en javascript.
+
+Pour des raisons de performances , avec les appels asynchrones etc dans mon application (est ce normal ?), il vaut mieux exécuter les scénarios un à un plutot que tous les scénarios
+en même temps.
+
+Pour exécuter le code principal  il faut précéder les lignes de command cli par node, en effet j'ai essayeé de suivre des guides expliquant comment appeler le script n'importe où
+sur le système mais la commande npm install -g sur ce projet ne fonctionne pas, et je n'ai pas trouvé la solution à l'erreur de la console  en vain..
